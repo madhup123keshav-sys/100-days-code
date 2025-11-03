@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-//Write a program to find profit or loss percentage given cost price and selling price.
-
 int main() {
     float costPrice, sellingPrice, profit, loss;
 
+   
     printf("Enter the Cost Price: ");
     scanf("%f", &costPrice);
     printf("Enter the Selling Price: ");
     scanf("%f", &sellingPrice);
 
+   
     if (sellingPrice > costPrice) {
         profit = sellingPrice - costPrice;
         printf("Profit = %.2f\n", profit);
