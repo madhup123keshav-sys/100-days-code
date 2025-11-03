@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
+//Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
 
 int main() {
     float a, b, c;
