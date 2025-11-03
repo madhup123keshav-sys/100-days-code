@@ -11,7 +11,7 @@ int main() {
     printf("Enter second number: ");
     scanf("%f", &num2);
     printf("Enter an operator (+, -, *, /, %%): ");
-    scanf(" %c", &operator); // Notice the space before %c to consume newline
+    scanf(" %c", &operator);
 
     switch(operator) {
         case '+':
