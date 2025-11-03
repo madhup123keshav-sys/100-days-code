@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-Write a program to input three numbers and find the largest among them using if–else.
+//Write a program to input three numbers and find the largest among them using if–else.
 
 int main() {
     int num1, num2, num3;
