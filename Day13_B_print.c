@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Write a program to print numbers from 1 to n.
+
 int main() {
     int n, i;
 
@@ -18,3 +20,5 @@ int main() {
 
     return 0;
 }
+
+    
