@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+//Find the sum of each row of a matrix and store it in an array.
+
+#define MAX_ROWS 10
+#define MAX_COLS 10
+
+int main() {
+    int matrix[MAX_ROWS][MAX_COLS];
+    int rowSums[MAX_ROWS]; 
+    int rows, cols, i, j;
+
+  
+    printf("Enter the number of rows (1 to %d): ", MAX_ROWS);
+    if (scanf("%d", &rows) != 1 || rows <= 0 || rows > MAX_ROWS) {
+        printf("Invalid number of rows.\n");
+        return 1;
+    }
+
+    printf("Enter the number of columns (1 to %d): ", MAX_COLS);
+    if (scanf("%d", &cols) != 1 || cols <= 0 || cols > MAX_COLS) {
+        printf("Invalid number of columns.\n");
+        return 1;
+    }
+
+    printf("\nEnter %d integers to fill the matrix:\n", rows * cols);
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
+            printf("Enter element [%d][%d]: ", i, j);
+            if (scanf("%d", &matrix[i][j]) != 1) {
+                printf("Invalid input.\a\n");
+                return 1;
+            }
+        }
+    }
+
+    printf("\n--- The matrix you entered is: ---\n");
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
+            
+            printf("%-4d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    for (i = 0; i < rows; i++) {
+        rowSums[i] = 0; 
+        for (j = 0; j < cols; j++) {
+            rowSums[i] += matrix[i][j];
+        }
+    }
+
+    printf("\n--- Sum of each row: ---\n");
+    for (i = 0; i < rows; i++) {
+        printf("Sum of row %d: %d\n", i, rowSums[i]);
+    }
+
+    return 0; 
+}
+
